@@ -1,0 +1,25 @@
+@model FilmApp.Data.Film
+
+<form asp-controller="Film" asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="FilmName" class="form-label">Filmin Adı</label>
+        <input asp-for="FilmName" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="FilmDirector" class="form-label">Filmin Yönetmeni</label>
+        <input asp-for="FilmDirector" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="ReleaseDate" class="form-label">Yıl</label>
+        <input asp-for="ReleaseDate" class="form-control">
+    <div class="mb-3">
+        <label asp-for="Rating" class="form-label">Puan</label>
+        <input asp-for="Rating" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="ImageUrl" class="form-label">Resim Link</label>
+        <input asp-for="ImageUrl" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+
+</form>

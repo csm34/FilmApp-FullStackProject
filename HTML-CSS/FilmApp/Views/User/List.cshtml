@@ -1,0 +1,29 @@
+@model List<User>
+
+<body>
+    <h1 class="text-center" style="padding: 20px;"> Kullanıcı Listesi</h1>
+    
+
+    <table class="table table-striped table-bordered table-hover text-white">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Kullanıcı Id</th>
+                <th scope="col">Kullanıcı Adı</th>
+                <th scope="col">Kullanıcı Soyadı</th>
+                <th scope="col">Email</th>
+                <th scope="col">Şifre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var user in Model){
+                <tr>
+                    <td style="color: white;">@user.UserId</td>
+                    <td style="color: white;">@user.UserFirstName</td>
+                    <td style="color: white;">@user.UserLastName</td>
+                    <td style="color: white;">@user.Email</td>
+                    <td style="color: white;">@user.Password</td>
+                </tr>}
+        </tbody>
+    </table>
+
+</body>

@@ -1,0 +1,31 @@
+@model FilmApp.Data.User
+
+<div class="container text-center mt-5" style="width: 35%;">
+    <div class="border p-4">
+
+<form asp-controller="User" asp-action="Create" method="post">
+    <div class="login-welcome-row" style="padding: 10px;">
+        <h3>Hoş Geldiniz!</h3>
+    </div>
+    <hr>
+    <div class="mb-3">
+        <label asp-for="UserFirstName" class="form-label">Kullanıcı Adı</label>
+        <input asp-for="UserFirstName" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label asp-for="UserLastName" class="form-label">Kullanıcı Soyadı</label>
+        <input asp-for="UserLastName" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" required>
+    </div><div class="mb-3">
+        <label asp-for="Password" class="form-label">Şifre</label>
+        <input asp-for="Password" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Kaydet</button>
+
+</form>
+
+    </div></div>

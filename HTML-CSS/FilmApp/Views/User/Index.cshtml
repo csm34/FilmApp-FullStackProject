@@ -1,0 +1,32 @@
+@model List<User>
+
+<div class="container text-center mt-5" style="width: 25%;">
+    <div class="border p-4">
+
+        <form asp-controller="User" method="post">
+            <div class="login-welcome-row">
+                <h3>Hoş Geldiniz!</h3>
+            </div>
+
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" id="email" name="Email" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+                <label for="Password" class="form-label">Şifre</label>
+                <input type="password" id="password" name="Password" placeholder="Password" required>
+            </div>
+            
+                <div class="mb-3 form-check">
+                    <div id="closer" style="50%">
+                    <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Beni Hatırla</label>
+                </div>
+            </div>    
+            <button type="submit" class="btn btn-success">Giriş</button>
+            <div class="message">@ViewBag.Message</div>
+
+        </form>
+    </div>
+</div>
+
